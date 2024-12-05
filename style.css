@@ -14,12 +14,11 @@ body{
     background-color: hsl(244, 38%, 16%);
     border-radius: 0.5rem;
     margin: 2rem auto;
-    /* padding: 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 10px hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 15px hsl(277, 25%, 41%);
     width: 350px;
     height: 700px;
 }
@@ -27,32 +26,101 @@ body{
     position: relative;
     border-radius: 0.5rem;
     width: 100%;
-    height: 200px;
-    margin-bottom: 1rem;
+    height: 55%;
+    overflow: hidden;
+}
+.card-image::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: hsl(277, 64%, 61%);
-    z-index: 1;
+    mix-blend-mode: multiply;
 }
 .card-image img{
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 .card-content{
     background-color: hsl(244, 38%, 16%);
-    padding: 1rem;
+    padding: 1.5rem;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-radius: 0 0 0.5rem 0.5rem;
 }
 span{
     color: hsl(277, 64%, 61%);
     font-weight: 700;
 }
 h1{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
+    font-family: "Lexend Deca", serif;
+}
+.card-content p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
 }
 p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+h2{
+    font-size: 1.2rem;
+}
+.companies, .templates, .queries{
+    margin-bottom: 1.8rem;
+}
+span:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+}
+h1:hover{
+    cursor: pointer;
+    color: hsl(277, 64%, 61%);
+}
+.companies:hover, .templates:hover, .queries:hover{
+    color: hsl(277, 64%, 61%);
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    body{
+        padding: 8rem;
+        font-size: 0.625rem;
+    }
+    .card{
+        flex-direction: row-reverse;
+        width: 900px;
+        height: 500px;
+    }
+    .card-image{
+        height: 100%;
+    }
+    .card-content{
+        padding: 2.5rem;
+        text-align: start;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1.1rem;
+    }
+    .stats{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
 }
